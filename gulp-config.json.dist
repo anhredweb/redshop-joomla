@@ -1,0 +1,11 @@
+{
+  "wwwDir"        : "/path/to/document.root",
+  "browserConfig" : {
+    "proxy" : "localhost"
+  },
+  "releaseDir"   : "/path/to/release/dir",
+  "basePaths": {
+    "plugins" : "./plugins",
+    "modules" : "./modules"
+  }
+}
