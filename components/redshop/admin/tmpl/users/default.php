@@ -45,31 +45,19 @@ $editIcon = '<span class="fa fa-pen-square mr-2" aria-hidden="true"></span>';
 									<?php echo HTMLHelper::_('grid.checkall'); ?>
 								</td>
 								<th scope="col" style="width:1%; min-width:85px" class="text-center">
-									<?php echo HTMLHelper::_('searchtools.sort', 'JSTATUS', 'a.state', $listDirn, $listOrder); ?>
+									<?php echo HTMLHelper::_('searchtools.sort', 'COM_REDSHOP_USER_USERNAME', 'a.username', $listDirn, $listOrder); ?>
 								</th>
 								<th scope="col" style="width:20%">
-									<?php echo HTMLHelper::_('searchtools.sort', 'JGLOBAL_TITLE', 'a.title', $listDirn, $listOrder); ?>
-								</th>
-								<th scope="col" style="width:20%">
-									<?php echo HTMLHelper::_('searchtools.sort', 'COM_MYWALKS_MYWALKS_LABEL_DESCRIPTION', 'a.description', $listDirn, $listOrder); ?>
+									<?php echo HTMLHelper::_('searchtools.sort', 'JSTATUS', 'a.activation', $listDirn, $listOrder); ?>
 								</th>
 								<th scope="col" style="width:10%">
-									<?php echo HTMLHelper::_('searchtools.sort', 'COM_MYWALKS_MYWALKS_LABEL_DISTANCE', 'a.distance', $listDirn, $listOrder); ?>
-								</th>
-								<th scope="col" style="width:10%">
-									<?php echo HTMLHelper::_('searchtools.sort', 'COM_MYWALKS_MYWALKS_LABEL_NVISITS', 'a.distance', $listDirn, $listOrder); ?>
+									<?php echo HTMLHelper::_('searchtools.sort', 'COM_REDSHOP_USER_EMAIL', 'a.email', $listDirn, $listOrder); ?>
 								</th>
 								<th scope="col" style="width:5%" class="d-none d-md-table-cell">
-									<?php echo HTMLHelper::_('searchtools.sort', 'COM_MYWALKS_MYWALKS_LABEL_TOILETS', 'a.toilets', $listDirn, $listOrder); ?>
+									<?php echo HTMLHelper::_('searchtools.sort', 'COM_REDSHOP_USER_REGISTERDATE', 'a.registerDate', $listDirn, $listOrder); ?>
 								</th>
 								<th scope="col" style="width:5%" class="d-none d-md-table-cell">
-									<?php echo HTMLHelper::_('searchtools.sort', 'COM_MYWALKS_MYWALKS_LABEL_CAFE', 'a.cafe', $listDirn, $listOrder); ?>
-								</th>
-								<th scope="col" style="width:5%" class="d-none d-md-table-cell">
-									<?php echo HTMLHelper::_('searchtools.sort', 'COM_MYWALKS_MYWALKS_LABEL_HILLS', 'a.hills', $listDirn, $listOrder); ?>
-								</th>
-								<th scope="col" style="width:5%" class="d-none d-md-table-cell">
-									<?php echo HTMLHelper::_('searchtools.sort', 'COM_MYWALKS_MYWALKS_LABEL_BOGS', 'a.bogs', $listDirn, $listOrder); ?>
+									<?php echo HTMLHelper::_('searchtools.sort', 'COM_REDSHOP_USER_LASTVISITDATE', 'a.lastvisitDate', $listDirn, $listOrder); ?>
 								</th>
 								<th scope="col" style="width:5%" class="d-none d-md-table-cell">
 									<?php echo HTMLHelper::_('searchtools.sort', 'JGRID_HEADING_ID', 'a.id', $listDirn, $listOrder); ?>
@@ -86,15 +74,19 @@ $editIcon = '<span class="fa fa-pen-square mr-2" aria-hidden="true"></span>';
 									<?php echo HTMLHelper::_('grid.id', $i, $item->id); ?>
 								</td>
 								<td class="class="article-status"">
-									<?php echo $states[$item->state]; ?>
+								<?php echo $item->username; ?>
 								</td>
-								<th scope="row" class="has-context">
-									<a class="hasTooltip" href="<?php echo Route::_('index.php?option=com_redshop&task=user.edit&id=' . $item->id); ?>">
-										<?php echo $editIcon; ?><?php echo $this->escape($item->title); ?>
-									</a>
-								</th>
-								<td class="">
-									<?php echo $item->description; ?>
+								<td class="class="article-status"">
+									<?php echo $states[$item->activation]; ?>
+								</td>
+								<td class="class="article-status"">
+								<?php echo $item->email; ?>
+								</td>
+								<td class="class="article-status"">
+								<?php echo $item->registerDate; ?>
+								</td>
+								<td class="class="article-status"">
+								<?php echo $item->lastvisitDate; ?>
 								</td>
 								<td class="d-none d-md-table-cell">
 									<?php echo $item->id; ?>
