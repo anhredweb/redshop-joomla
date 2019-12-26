@@ -44,7 +44,7 @@ class UsersModel extends ListModel
 			$config['filter_fields'] = array(
 				'id', 'a.id',
 				'title', 'a.title',
-				'state', 'a.state',
+				'state', 'a.',
 			);
 		}
 
@@ -124,12 +124,12 @@ class UsersModel extends ListModel
 
 		if (is_numeric($published))
 		{
-			$query->where($db->quoteName('a.state') . ' = :published');
+			$query->where($db->quoteName('a.activation') . ' = 1');
 			$query->bind(':published', $published, ParameterType::INTEGER);
 		}
 		elseif ($published === '')
 		{
-			$query->where('(' . $db->quoteName('a.state') . ' = 0 OR ' . $db->quoteName('a.state') . ' = 1)');
+			$query->where('(' . $db->quoteName('a.activation') . ' = 0 OR ' . $db->quoteName('a.activation') . ' = 1)');
 		}
 
 		// Filter by search in title.
