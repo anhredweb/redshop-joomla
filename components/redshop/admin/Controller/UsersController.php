@@ -33,6 +33,12 @@ class UsersController extends AdminController
 	 */
 	public function getModel($name = 'User', $prefix = 'Administrator', $config = array('ignore_request' => true))
 	{
-		return parent::getModel($name, $prefix, $config);
+		$model = parent::getModel($name, $prefix, $config);
+
+		echo '<pre>';
+		print_r($model);
+		exit;
+
+		return $model;
 	}
 }
