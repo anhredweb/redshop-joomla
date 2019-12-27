@@ -13,21 +13,51 @@ gulp.task('release', function(cb){
     cb();
 });
 
+
 /**
- * GULP COPY
+ * Gulp copy language final
+ */
+gulp.task('copy:language:site', function(cb){
+    gulp.src(['./components/redshop/site/language/**'])
+        .pipe(gulp.dest(config.wwwDir + '/language'));
+    cb();
+});
+gulp.task('copy:language:admin', function(cb){
+    gulp.src(['./components/redshop/admin/language/**'])
+        .pipe(gulp.dest(config.wwwDir + '/administrator/language'));
+    cb();
+});
+gulp.task('copy:language', gulp.series('copy:language:admin', 'copy:language:site'));
+
+/**
+ * GULP COPY COMPONENT
  */
 gulp.task('copy:component:site', function(cb){
     console.log(config.wwwDir + '/components/com_redshop');
-    gulp.src(['./components/redshop/site/**'])
+    gulp.src(
+        [
+            './components/redshop/site/**',
+            '!./components/redshop/language/**'
+        ]
+    )
         .pipe(gulp.dest(config.wwwDir + '/components/com_redshop'));
     cb();
 });
 gulp.task('copy:component:admin', function(cb){
     console.log(config.wwwDir + '/administrator/components/com_redshop');
-    gulp.src(['./components/redshop/admin/**'])
+    gulp.src(
+        [
+            './components/redshop/admin/**',
+            '!./components/redshop/admin/language/**'
+        ]
+    )
         .pipe(gulp.dest(config.wwwDir + '/administrator/components/com_redshop'));
     cb();
 });
 gulp.task('copy:component', gulp.series('copy:component:admin', 'copy:component:site'));
-gulp.task('copy',gulp.series('copy:component'));
+
+/**
+ *  Gulp copy final
+ */
+gulp.task('copy',gulp.series('copy:component', 'copy:language'));
 
