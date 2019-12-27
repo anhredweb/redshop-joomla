@@ -57,7 +57,22 @@ gulp.task('copy:component:admin', function(cb){
 gulp.task('copy:component', gulp.series('copy:component:admin', 'copy:component:site'));
 
 /**
+ * GULP COPY LIBRARIES
+ */
+gulp.task('copy:library:redshop', function(cb){
+    gulp.src(['./libraries/redshop/**'])
+        .pipe(gulp.dest(config.wwwDir + '/libraries/redshop'));
+    cb();
+});
+
+gulp.task('copy:libraries', gulp.series('copy:library:redshop'));
+
+/**
  *  Gulp copy final
  */
-gulp.task('copy',gulp.series('copy:component', 'copy:language'));
+gulp.task('copy',gulp.series(
+    'copy:libraries',
+    'copy:component',
+    'copy:language'
+));
 
