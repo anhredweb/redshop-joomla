@@ -17,11 +17,13 @@ gulp.task('release', function(cb){
  * GULP COPY
  */
 gulp.task('copy:component:site', function(cb){
+    console.log(config.wwwDir + '/components/com_redshop');
     gulp.src(['./components/redshop/site/**'])
         .pipe(gulp.dest(config.wwwDir + '/components/com_redshop'));
     cb();
 });
 gulp.task('copy:component:admin', function(cb){
+    console.log(config.wwwDir + '/administrator/components/com_redshop');
     gulp.src(['./components/redshop/admin/**'])
         .pipe(gulp.dest(config.wwwDir + '/administrator/components/com_redshop'));
     cb();

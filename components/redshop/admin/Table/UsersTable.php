@@ -30,6 +30,6 @@ class UsersTable extends Table
 	 */
 	public function __construct(DatabaseDriver $db)
 	{
-		parent::__construct('#__redshop', 'id', $db);
+		parent::__construct('#__users', 'id', $db);
 	}
 }
