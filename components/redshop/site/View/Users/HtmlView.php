@@ -1,13 +1,13 @@
 <?php
 /**
- * @package     Mywalks.Site
- * @subpackage  com_mywalks
+ * @package     users.Site
+ * @subpackage  COM_REDSHOP
  *
  * @copyright   Copyright (C) 2005 - 2019 Open Source Matters, Inc. All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
-namespace J4xdemos\Component\Mywalks\Site\View\Mywalks;
+namespace J4xdemos\Component\users\Site\View\users;
 
 defined('_JEXEC') or die;
 

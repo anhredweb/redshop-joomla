@@ -23,7 +23,7 @@ use Joomla\CMS\Language\Text;
 
 <div class="table-responsive">
   <table class="table table-striped">
-  <caption><?php echo Text::_('COM_MYWALKS_WALK_REPORTS'); ?></caption>
+  <caption><?php echo Text::_('COM_REDSHOP_WALK_REPORTS'); ?></caption>
   <thead>
 	</thead>
 	<tbody>

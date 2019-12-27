@@ -20,7 +20,7 @@ use Joomla\CMS\Router\Route;
 use Joomla\Utilities\ArrayHelper;
 
 /**
- * Mywalks HTML helper
+ * users HTML helper
  *
  * @since  3.0
  */
@@ -55,7 +55,7 @@ class AdministratorService
 				->select('c.*')
 				->select('l.sef as lang_sef')
 				->select('l.lang_code')
-				->from('#__mywalkst as c')
+				->from('#__userst as c')
 				->select('cat.title as category_title')
 				->join('LEFT', '#__categories as cat ON cat.id=c.catid')
 				->where('c.id IN (' . implode(',', array_values($associations)) . ')')

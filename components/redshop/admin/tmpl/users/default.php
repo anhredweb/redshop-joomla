@@ -37,7 +37,7 @@ $editIcon = '<span class="fa fa-pen-square mr-2" aria-hidden="true"></span>';
 				<?php else : ?>
 					<table class="table" id="redshopList">
 						<caption id="captionTable">
-							<?php echo Text::_('COM_MYWALKS_MYWALKS_TABLE_CAPTION'); ?>, <?php echo Text::_('JGLOBAL_SORTED_BY'); ?>
+							<?php echo Text::_('COM_REDSHOP_USERS_TABLE_CAPTION'); ?>, <?php echo Text::_('JGLOBAL_SORTED_BY'); ?>
 						</caption>
 						<thead>
 							<tr>

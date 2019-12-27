@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <metadata>
-	<layout title="COM_MYWALKS_MYWALKS_VIEW_DEFAULT_TITLE" option="COM_MYWALKS_MYWALKS_VIEW_DEFAULT_OPTION">
+	<layout title="COM_REDSHOP_USERS_VIEW_DEFAULT_TITLE" option="COM_REDSHOP_USERS_VIEW_DEFAULT_OPTION">
 		<help
-			key="JHELP_MENUS_MENU_ITEM_MYWALKS"
+			key="JHELP_MENUS_MENU_ITEM_users"
 		/>
 		<message>
-			<![CDATA[COM_MYWALKS_MYWALKS_VIEW_DEFAULT_DESC]]>
+			<![CDATA[COM_REDSHOP_USERS_VIEW_DEFAULT_DESC]]>
 		</message>
 	</layout>
 

@@ -86,15 +86,15 @@ class UsersNomenuRules implements RulesInterface
 	 */
 	public function build(&$query, &$segments)
 	{
-		// content of $query ($segments is empty or [[0] => mywalk-3])
-		// when called by the menu: [[option] => com_mywalks, [Itemid] => 126]
-		// when called by the component: [[option] => com_mywalks, [view] => mywalk, [id] => 1, [Itemid] => 126]
-		// when called from a module: [[option] => com_mywalks, [view] => mywalks, [format] => html, [Itemid] => 126]
-		// when called from breadcrumbs: [[option] => com_mywalks, [view] => mywalks, [Itemid] => 126]
+		// content of $query ($segments is empty or [[0] => USER-3])
+		// when called by the menu: [[option] => COM_REDSHOP, [Itemid] => 126]
+		// when called by the component: [[option] => COM_REDSHOP, [view] => USER, [id] => 1, [Itemid] => 126]
+		// when called from a module: [[option] => COM_REDSHOP, [view] => users, [format] => html, [Itemid] => 126]
+		// when called from breadcrumbs: [[option] => COM_REDSHOP, [view] => users, [Itemid] => 126]
 
-		// the url should look like this: /site-root/mywalks/walk-n/walk-title.html
+		// the url should look like this: /site-root/users/walk-n/walk-title.html
 
-		// if the view is not mywalk - the single walk view
+		// if the view is not USER - the single walk view
 		if (!isset($query['view']) || (isset($query['view']) && $query['view'] !== 'user') || isset($query['format']))
 		{
 			return;

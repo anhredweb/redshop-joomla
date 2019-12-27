@@ -1,13 +1,13 @@
 <?php
 /**
- * @package     Mywalks.Site
- * @subpackage  com_mywalks
+ * @package     users.Site
+ * @subpackage  COM_REDSHOP
  *
  * @copyright   Copyright (C) 2005 - 2019 Open Source Matters, Inc. All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
-namespace J4xdemos\Component\Mywalks\Site\View\Mywalk;
+namespace J4xdemos\Component\users\Site\ViewUser;
 
 defined('_JEXEC') or die;
 
@@ -17,7 +17,7 @@ use Joomla\CMS\MVC\View\GenericDataException;
 use Joomla\CMS\MVC\View\HtmlView as BaseHtmlView;
 
 /**
- * HTML Mywalk View class for the Mywalks component
+ * HTML User View class for the users component
  *
  * @since  1.5
  */

@@ -16,10 +16,10 @@ use Joomla\CMS\Component\Router\RouterBase;
  *
  * @since  3.3
  */
-class MywalksRouter extends RouterBase
+class usersRouter extends RouterBase
 {
 	/**
-	 * Build the route for the com_mywalks component
+	 * Build the route for the COM_REDSHOP component
 	 *
 	 * @param   array  &$query  An array of URL arguments
 	 *
@@ -48,6 +48,6 @@ class MywalksRouter extends RouterBase
 	 */
 	public function parse(&$segments)
 	{
-		return array('view' => 'mywalks');
+		return array('view' => 'users');
 	}
 }

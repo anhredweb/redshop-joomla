@@ -1,7 +1,7 @@
 <?php
 /**
- * @package     Mywalks.Administrator
- * @subpackage  com_mywalks
+ * @package     users.Administrator
+ * @subpackage  COM_REDSHOP
  *
  * @copyright   Copyright (C) 2005 - 2019 Open Source Matters, Inc. All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
@@ -25,7 +25,7 @@ use Joomla\DI\Container;
 use Joomla\DI\ServiceProviderInterface;
 
 /**
- * The mywalks service provider.
+ * The users service provider.
  *
  * @since  4.0.0
  */
