@@ -1,6 +1,4 @@
 const gulp      = require('gulp');
-const gulpCopy  = require('gulp-copy');
-const rename    = require('gulp-rename');
 const zip       = require('gulp-zip');
 const path      = require("path");
 const fs        = require("fs");
